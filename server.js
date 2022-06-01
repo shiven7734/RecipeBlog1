@@ -113,7 +113,7 @@ db.once("open", () => {
 // }).catch(function(){
 //     console.log(error)
 // });
-
+app.use(express.static(__dirname + "/public"));
 app.use('/',RecipeRoutes);
 let port=process.env.PORT||8080
 app.listen(port,()=>{
