@@ -21,7 +21,7 @@ app.set('views', path.join(__dirname, 'views'))
 
 
 const RecipeRoutes=require('./routes/recipe');
-mongoose.connect('mongodb://localhost:27017/Recipe', {
+mongoose.connect(process.env.DB_URL||'mongodb://localhost:27017/Recipe', {
     useNewUrlParser: true,
    
     useUnifiedTopology: true
